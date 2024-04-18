@@ -1,0 +1,77 @@
+.container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  margin-top: 60px;
+}
+
+.videoTag {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.overlay-elements {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#899D9D), to(#2C3531));
+  background-image: linear-gradient(to bottom right, #899D9D, #2C3531);
+  opacity: .83;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20% 32px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.overlay-elements :last-child {
+  margin-bottom: 0;
+}
+
+.overlay-elements h1 {
+  font-size: 32pt;
+  font-weight: bold;
+  text-shadow: 0 0 0.3em #2C3531;
+  opacity: 1;
+}
+
+.overlay-elements p {
+  font-size: 16pt;
+  text-shadow: 0 0 0.3em #2C3531;
+  margin: 1em 0;
+  opacity: 1;
+}
+
+.overlay-elements a {
+  font-size: 16px;
+  line-height: 19px;
+  color: #AFEEEE;
+  font-weight: bold;
+  opacity: 1;
+  cursor: pointer;
+}
+
+code {
+  font-family: monospace;
+}
+
+body {
+  background: #2C3531;
+  color: #FFFFFF;
+  font-family: 'Oxygen', sans-serif;
+}
+/*# sourceMappingURL=slider.css.map */

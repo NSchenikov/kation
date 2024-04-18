@@ -1,0 +1,19 @@
+@import "./../../utilities/_colors/colors";
+
+.btn {
+    width: 145px;
+    height: 45px;
+    color: $primaryWindowColor;
+    border: 2px $primaryWindowColor solid;
+    background-color: $background;
+    font-size: 16px;
+    align-self: center;
+    justify-self: flex-end;
+    margin-top: 100px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: $onHoverColor;
+    border: 2px $onHoverColor solid;
+}

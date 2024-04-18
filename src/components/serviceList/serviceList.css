@@ -1,0 +1,26 @@
+.wrap {
+  margin-top: 200px;
+  width: 100%;
+  height: 2300px;
+  background-color: #899D9D;
+}
+
+.cardsWrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 255px 255px 255px 255px 255px;
+      grid-template-columns: 255px 255px 255px 255px 255px;
+  gap: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.headerWrapper {
+  padding-left: 20px;
+}
+
+h1 {
+  padding-top: 40px;
+}
+/*# sourceMappingURL=serviceList.css.map */

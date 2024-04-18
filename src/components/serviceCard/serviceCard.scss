@@ -1,0 +1,44 @@
+@import './../../utilities/_colors/colors';
+
+
+.cardBox {
+    width: 255px;
+    height: 492px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+    background-color: $background;
+    margin-top: 20px;
+    border: 1px $shadeBorder solid;
+    border-radius: 2px;
+    transition: all .3s;
+}
+
+.cardBox:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 5px #ccc;
+}
+
+.material {
+    width: 223px;
+    height: 120px;
+    margin-top: 10px;
+    margin-left: 16px;
+}
+
+.material-header {
+    margin-left: 16px;
+}
+
+h4 {
+    color: $colorOfMainHeader;
+}
+
+.description {
+    background-color: $background;
+    color: $colorOfText;
+    width: 223px;
+    margin-left: 16px;
+    margin-top: 10px;
+}

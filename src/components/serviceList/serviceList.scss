@@ -1,0 +1,26 @@
+@import './../../utilities/_colors/colors';
+
+.wrap {
+    margin-top: 200px;
+    width: 100%;
+    height: 2300px;
+    background-color: $colorOfSilver;
+    // padding-left: calc(50% - 400px);
+    // padding-right: calc(50% - 400px);
+}
+
+.cardsWrapper {
+    display: grid;
+    grid-template-columns: 255px 255px 255px 255px 255px;
+    gap: 15px;
+    justify-content: center;
+}
+
+.headerWrapper {
+    padding-left: 20px;;
+}
+
+h1 {
+    padding-top: 40px;
+}
+

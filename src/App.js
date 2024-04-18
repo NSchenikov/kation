@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import { AppRoutes } from './routes/Routes';
+import { Header } from './components/header/Header';
+// import { GalleryFotoGold } from './pages/gallery-foto-gold/GalleryFotoGold';
+// import { Gallery } from './pages/gallery/gallery';
+import { Mainpage } from './pages/mainpage/mainpage';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <AppRoutes>
+        <Mainpage/>
+        {/* <Gallery /> */}
+        {/* <GalleryFotoGold /> */}
+      </AppRoutes>
     </div>
   );
 }
