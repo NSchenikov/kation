@@ -5,7 +5,9 @@
   border: 2px #AFEEEE solid;
   background-color: #2C3531;
   font-size: 16px;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   justify-self: flex-end;
   margin-top: 100px;
   cursor: pointer;
@@ -14,4 +16,5 @@
 .btn:hover {
   color: #8EAFAF;
   border: 2px #8EAFAF solid;
-}/*# sourceMappingURL=button.css.map */
+}
+/*# sourceMappingURL=button.css.map */

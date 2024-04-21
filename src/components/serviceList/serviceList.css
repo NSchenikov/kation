@@ -5,10 +5,14 @@
 }
 
 .cardsWrapper {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 255px 255px 255px 255px 255px;
+  -ms-grid-columns: 255px 255px 255px 255px 255px;
+      grid-template-columns: 255px 255px 255px 255px 255px;
   gap: 15px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .headerWrapper {
@@ -17,4 +21,5 @@
 
 h1 {
   padding-top: 40px;
-}/*# sourceMappingURL=serviceList.css.map */
+}
+/*# sourceMappingURL=serviceList.css.map */

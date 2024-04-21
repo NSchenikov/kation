@@ -15,7 +15,8 @@ export const ServiceList = ({ heading, array }) => {
             return (
               <ServiceCard
                 key={index}
-                background={card.color || `url(${card.url})`}
+                background={card.color}
+                backgroundImg={card.url ? `url(${card.url})` : ''}
                 name={card.name}
                 descr={card.descr ? card.descr : ''}
               />

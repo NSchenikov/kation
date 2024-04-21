@@ -1,23 +1,36 @@
 .cardBox {
   width: 255px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   gap: 7px;
   background-color: #2C3531;
   margin-top: 20px;
   border: 1px #0B191A solid;
   border-radius: 2px;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   padding-bottom: 10px;
 }
 
 .cardBox:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 5px #ccc;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 0 0 5px #ccc;
+          box-shadow: 0 0 5px #ccc;
 }
 
 .material {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   width: 223px;
   height: 120px;
   margin-top: 10px;
@@ -38,4 +51,5 @@ h4 {
   width: 223px;
   margin-left: 16px;
   margin-top: 10px;
-}/*# sourceMappingURL=serviceCard.css.map */
+}
+/*# sourceMappingURL=serviceCard.css.map */

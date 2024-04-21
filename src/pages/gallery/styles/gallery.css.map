@@ -1,1 +1,10 @@
-{"version":3,"sources":["gallery.scss","gallery.css"],"names":[],"mappings":"AAEA;EACI,yBAAA;EACA,kBAAA;EACA,oBAAA;ACDJ;;ADIE;EACE,sBAAA;EACA,wBAAA;ACDJ","file":"gallery.css"}
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,KAAK,CAAC;EACF,MAAM,EAAE,GAAG,CCMD,OAAO,CDNQ,KAAK;EAC9B,aAAa,EAAE,GAAG;EAClB,UAAU,EAAE,QAAQ;CACrB;;AAED,AAAA,KAAK,AAAA,MAAM,CAAC;EACV,SAAS,EAAE,WAAW;EACtB,UAAU,EAAE,YAAY;CACzB",
+    "sources": [
+        "gallery.scss",
+        "../../../utilities/_colors/_colors.scss"
+    ],
+    "names": [],
+    "file": "gallery.css"
+}
