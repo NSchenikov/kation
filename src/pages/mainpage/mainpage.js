@@ -1,123 +1,117 @@
-
+import { useState } from 'react';
 import { Slider } from '../../components/slider/slider';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import WorkIcon from '@mui/icons-material/Work';
+import pic1 from './../../img/shutterstock_1536927203.jpg';
 import 'animate.css/animate.min.css';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { ServiceList } from '../../components/serviceList/serviceList';
 import { Carousel } from '../../components/carousel/carousel';
 import './mainpage.css';
 import { Services } from '../../utilities/serivice';
-import { useInView } from 'react-intersection-observer';
-import styled, { keyframes } from 'styled-components';
-
-const fadeIn = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`;
-
-const AnimatedItem = styled.div`
-  animation: ${fadeIn} 6s ease-in-out forwards;
-`;
 
 export const Mainpage = () => {
-  const { ref, inView } = useInView({ triggerOnce: true });
+
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  const handleAnimationEnd = () => {
+        setHasAnimated(true);
+      };
 
   const renderPros = () => {
     return (
-
       <div className="items">
-      <AnimatedItem className="item a">
-
-        <AssignmentIcon style={{ fontSize: 'XXX-Large' }} />
-        <div className="item-description">
-          Возможность покры-
-          <br />
-          тия сложных
-          <br />
-          конструкций
-          <br />
-          по техническому
-          <br />
-          заданию заказчика
-        </div>
-
-      </AnimatedItem>
-      <AnimatedItem className="item b">
-
-          <LocalOfferIcon style={{ fontSize: 'XXX-Large' }} />
-        <div className="item-description">
-          Гибкие цены
-          <br />
-          на гальваническое
-          <br />
-        покрытие
-        </div>
-
-      </AnimatedItem>
-      <AnimatedItem className="item c">
-
-          <AccessTimeIcon style={{ fontSize: 'XXX-Large' }} />
+        <div className="item a">
+          <AssignmentIcon style={{ fontSize: 'XXX-Large' }} />
           <div className="item-description">
-            Исполнение заказа
+            Возможность покры-
             <br />
-            согласно срокам
+            тия сложных
             <br />
-            и договоренностью
-            <br />с клиентом
+            конструкций
+            <br />
+            по техническому
+            <br />
+            заданию заказчика
           </div>
-
-      </AnimatedItem>
-      <AnimatedItem className="item d">
-
-          <WorkIcon style={{ fontSize: 'XXX-Large' }} />
+        </div>
+        <div className="item b">
+            <LocalOfferIcon style={{ fontSize: 'XXX-Large' }} />
           <div className="item-description">
-            Качественное
+            Гибкие цены
             <br />
-            гальваническое
+            на гальваническое
             <br />
-            покрытие согласно
-            <br />
-            ГОСТам
+          покрытие
           </div>
-
-      </AnimatedItem>
-
+        </div>
+        <div className="item c">
+            <AccessTimeIcon style={{ fontSize: 'XXX-Large' }} />
+            <div className="item-description">
+              Исполнение заказа
+              <br />
+              согласно срокам
+              <br />
+              и договоренностью
+              <br />с клиентом
+            </div>
+        </div>
+        <div className="item d">
+            <WorkIcon style={{ fontSize: 'XXX-Large' }} />
+            <div className="item-description">
+              Качественное
+              <br />
+              гальваническое
+              <br />
+              покрытие согласно
+              <br />
+              ГОСТам
+            </div>
+        </div>
+        <img
+          className="e"
+          src={pic1}
+          style={{ width: '220px', height: '300px' }}
+        />
       </div>
-    )
-  }
+    );
+  };
+
+  const renderAnimatedPros = () => {
+    return (
+      <div>
+        <AnimationOnScroll
+          animateIn="animate__bounceInRight"
+          duration={2}
+          afterAnimatedIn={handleAnimationEnd}
+        >
+          <div>{renderPros()}</div>
+        </AnimationOnScroll>
+      </div>
+    );
+  };
 
   return (
-    <div className="wrapper">
+    <div>
+      <div className="wrapper">
       <Slider />
-      <div className="main-content">
-        <h1 className="head">ПРЕИМУЩЕСТВА</h1>
-        <div ref={ref}>
-          {inView ? (
-            <div>
-                  {renderPros()}
-              </div>
-          ) : (
-            <div style={{ height: '100px' }}>
-            </div>
-          )}
+        <div className="main-content">
+          <h1 className="head">ПРЕИМУЩЕСТВА</h1>
+          <div>
+            {!hasAnimated && renderAnimatedPros()}
+            {hasAnimated && renderPros()}
+          </div>
         </div>
-      </div>
-      <ServiceList heading={'УСЛУГИ'} array={Services} />
-      <div className="gallery">
-        <h1>ГАЛЕРЕЯ</h1>
-        <Carousel />
+        <ServiceList heading={'УСЛУГИ'} array={Services} />
+         <div className="gallery">
+           <h1>ГАЛЕРЕЯ</h1>
+           <AnimationOnScroll animateIn="animate__bounceInRight" duration={2}>
+             <Carousel />
+           </AnimationOnScroll>
+         </div>
       </div>
     </div>
   );
 };
-
-
-
