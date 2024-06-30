@@ -103,10 +103,29 @@
   animation: bounceInRight 3s;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) { //tablet
-  /* … */
+@media screen and (min-width: 1025px) { //desktop 
+  .ProsIcon {
+    font-size: xx-large !important;
+  }
 }
 
-@media (min-width: 425px) and (max-width: 767px) { //mobile
+@media screen and (min-width: 768px) and (max-width: 1024px) { /* tablet */
+  .head {
+    padding-left: 35px;
+  }
+  .items {
+    grid-template-columns: 250px 250px 250px;
+    justify-content: center;
+  }
+  .item {
+    gap: 20px;
+    justify-content: center;
+  }
+  .galleryHeading {
+    padding-left: 60px;
+  }
+}
+
+@media screen and (min-width: 425px) and (max-width: 767px) { //mobile
   /* … */
 }

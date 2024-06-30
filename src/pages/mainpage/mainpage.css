@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .head {
   margin-top: 600px;
 }
@@ -165,5 +166,38 @@
 .AnimationOnScrollRight {
   -webkit-animation: bounceInRight 3s;
           animation: bounceInRight 3s;
+}
+
+@media screen and (min-width: 1025px) {
+  .ProsIcon {
+    font-size: xx-large !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* tablet */
+  .head {
+    padding-left: 35px;
+  }
+  .items {
+    -ms-grid-columns: 250px 250px 250px;
+        grid-template-columns: 250px 250px 250px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .item {
+    gap: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .galleryHeading {
+    padding-left: 60px;
+  }
+}
+
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  /* … */
 }
 /*# sourceMappingURL=mainpage.css.map */
