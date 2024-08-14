@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/kation/static/css/main.57ac2a8c.css",
-    "main.js": "/kation/static/js/main.fa19c62c.js",
+    "main.js": "/kation/static/js/main.338fe160.js",
     "static/media/IMG_1209.MP4": "/kation/static/media/IMG_1209.67a8c0318047ace0244b.MP4",
     "static/media/shutterstock_1536927203.jpg": "/kation/static/media/shutterstock_1536927203.e0d37158840048fc0daa.jpg",
     "index.html": "/kation/index.html",
     "main.57ac2a8c.css.map": "/kation/static/css/main.57ac2a8c.css.map",
-    "main.fa19c62c.js.map": "/kation/static/js/main.fa19c62c.js.map"
+    "main.338fe160.js.map": "/kation/static/js/main.338fe160.js.map"
   },
   "entrypoints": [
     "static/css/main.57ac2a8c.css",
-    "static/js/main.fa19c62c.js"
+    "static/js/main.338fe160.js"
   ]
 }
