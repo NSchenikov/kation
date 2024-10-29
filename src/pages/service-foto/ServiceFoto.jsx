@@ -8,41 +8,36 @@ import {
 import * as S from './ServiceFoto.styles';
 import { Container, TitleH1 } from '../../App.styles';
 
-// import { useParams } from 'react-router-dom';
-
-const itemData = [
-  {
-    img: '/img/gallery/slide6.jpg',
-    title: 'foto1',
-  },
-  {
-    img: '/img/gallery/slide3.jpg',
-    title: 'foto2',
-  },
-  {
-    img: '/img/gallery/slide8.jpg',
-    title: 'foto3',
-  },
-  {
-    img: '/img/gallery/slide11.jpg',
-    title: 'foto4',
-  },
-  {
-    img: '/img/gallery/slide12.jpg',
-    title: 'foto5',
-  },
-  {
-    img: '/img/gallery/slide20.jpg',
-    title: 'foto6',
-  },
-  {
-    img: '/img/gallery/slide23.jpg',
-    title: 'foto8',
-  },
-];
+import { useParams } from 'react-router-dom';
 
 export const ServiceFoto = () => {
-  // const params = useParams
+  const { id } = useParams();
+  const itemCountMap = {
+    1: 30,
+    2: 30,
+    3: 20,
+    4: 10,
+    5: 4,
+    6: 4,
+  };
+
+  const itemCount = itemCountMap[Number(id)] || 0;
+
+  const itemData = Array.from({ length: itemCount }, (_, index) => ({
+    img: `/img/gallery/${id}/${index + 1}.jpg`,
+    title: `foto${index + 1}`,
+  }));
+
+  const titles = [
+    'оловянированию',
+    'золочению',
+    'серебрению',
+    'никелированию',
+    'меднению',
+    'палладированию',
+  ];
+
+  const titlePage = titles[Number(id)] || titles[0];
 
   return (
     <Container>
@@ -60,7 +55,7 @@ export const ServiceFoto = () => {
         </Link>
         <Typography color="#ffffff">Фото работ по золочению</Typography>
       </Breadcrumbs>
-      <TitleH1>Фото работ по золочению</TitleH1>
+      <TitleH1>Фото работ по {titlePage}</TitleH1>
       <S.FotoContainer>
         {itemData.map((item) => (
           <ImageListItem key={item.img}>
@@ -69,6 +64,7 @@ export const ServiceFoto = () => {
               src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
               alt={item.title}
               loading="lazy"
+              style={{ height: '25vh', width: '100%' }}
             />
           </ImageListItem>
         ))}

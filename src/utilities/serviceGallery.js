@@ -2,12 +2,12 @@ export const serviceGallery = [
   {
     id: 1,
     name: 'Фото работ по золочению',
-    url: '/img/gallery/slide6.jpg',
+    url: '/img/gallery/gold.jpg',
   },
   {
     id: 2,
     name: 'Фото работ по серебрению',
-    url: '/img/gallery/slide3.jpg',
+    url: '/img/gallery/2/28.jpg',
   },
   {
     id: 3,
@@ -17,16 +17,16 @@ export const serviceGallery = [
   {
     id: 4,
     name: 'Фото работ по меднению',
-    url: '/img/gallery/slide20.jpg',
+    url: '/img/gallery/4/2.jpg',
   },
   {
     id: 5,
     name: 'Фото работ по палладированию',
-    url: '/img/gallery/slide20.jpg',
+    url: '/img/gallery/5/1.jpg',
   },
   {
     id: 6,
     name: 'Фото работ по оловянированию',
-    url: '/img/gallery/slide20.jpg',
+    url: '/img/gallery/6/3.jpg',
   },
 ];
