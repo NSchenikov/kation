@@ -9,8 +9,6 @@ import 'animate.css/animate.min.css';
 import { ServiceList } from '../../components/serviceList/serviceList';
 import { Carousel } from '../../components/carousel/carousel';
 import './mainpage.css';
-// import { Services } from '../../utilities/serivice';
-// import {images} from '../../utilities/carouselImg';
 import { fetchData } from '../../utilities/API';
 
 export const Mainpage = () => {
@@ -36,12 +34,8 @@ export const Mainpage = () => {
           const cleanedUrls = urls.map(url => {
             return url.replace(/[''[\]]/g, '');
           });
-          
           setCarouselImgArr(cleanedUrls);
-          // console.log('Cleaned Image URLs array', cleanedUrls);
-        } else {
-          // console.log('Received data is not a string:', res);
-        }
+        } 
       })
       fetchData({table: serviceGallery})
       .then((res) => {
@@ -50,15 +44,11 @@ export const Mainpage = () => {
     
   }, [])
 
-  // useEffect(() => {
-  //   console.log(serviceArr);
-  // }, [serviceArr])
-
   const renderPros = () => {
     return (
       <div className="items">
         <div className="item a">
-          <AssignmentIcon style={{ fontSize: 'XXX-Large' }} />
+          <AssignmentIcon className='ProsIcon' />
           <div className="item-description">
             Возможность покры-
             <br />
@@ -72,7 +62,7 @@ export const Mainpage = () => {
           </div>
         </div>
         <div className="item b">
-            <LocalOfferIcon style={{ fontSize: 'XXX-Large' }} />
+            <LocalOfferIcon className='ProsIcon' />
           <div className="item-description">
             Гибкие цены
             <br />
@@ -82,7 +72,7 @@ export const Mainpage = () => {
           </div>
         </div>
         <div className="item c">
-            <AccessTimeIcon style={{ fontSize: 'XXX-Large' }} />
+            <AccessTimeIcon className='ProsIcon' />
             <div className="item-description">
               Исполнение заказа
               <br />
@@ -93,7 +83,7 @@ export const Mainpage = () => {
             </div>
         </div>
         <div className="item d">
-            <WorkIcon style={{ fontSize: 'XXX-Large' }} />
+            <WorkIcon className='ProsIcon' />
             <div className="item-description">
               Качественное
               <br />
@@ -133,7 +123,7 @@ export const Mainpage = () => {
         </div>
         <ServiceList heading={'УСЛУГИ'} array={serviceArr} />
          <div className="gallery">
-           <h1>ГАЛЕРЕЯ</h1>
+           <h1 className='galleryHeading'>ГАЛЕРЕЯ</h1>
            <div className='AnimationOnScrollRight'>
              <Carousel images={carouselImgArr} />
              </div>

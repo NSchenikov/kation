@@ -59,3 +59,17 @@ $colorOfSilver: #899D9D;
   .AnimationOnScrollLeft {
     animation: bounceInLeft 3s;
   }
+
+  @media screen and (min-width: 1025px) { //desktop 
+    //
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 1024px) { /* tablet */
+    .cardsWrapper {
+      grid-template-columns: 230px 230px 230px;
+    }
+  }
+  
+  @media screen and (min-width: 425px) and (max-width: 767px) { //mobile
+    /* … */
+  }

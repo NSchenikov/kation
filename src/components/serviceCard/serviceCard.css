@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --clr-neutral-900: hsl(207, 19%, 9%);
   --clr-neutral-100: hsl(0, 0%, 100%);
@@ -148,5 +149,22 @@ body {
     -webkit-transition-delay: 0ms !important;
             transition-delay: 0ms !important;
   }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* tablet */
+  .card {
+    padding: 7rem 0 0;
+  }
+  .card-title::after {
+    display: none;
+  }
+  .card-body {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  /* … */
 }
 /*# sourceMappingURL=serviceCard.css.map */
